@@ -11,7 +11,7 @@ public class DefaultInterceptor implements HandlerInterceptor {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    //컨트롤러 진입 전에 호출되는 메서드
+    //Controller 진입 전에 호출되는 메서드
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         logger.info("preHandle / request [{}]", request);
