@@ -15,6 +15,9 @@ public class DefaultInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         logger.info("preHandle / request [{}]", request);
+
+        String accessToken = request.getHeader("Authorization");
+
         return true;
     }
 
